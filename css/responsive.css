@@ -1,0 +1,215 @@
+/* Responsive Styles */
+
+/* For tablets and smaller laptops */
+@media screen and (max-width: 992px) {
+
+    .btn-home {
+        left: 16px;
+        top: 16px;
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
+
+    /* Header adjustments */
+    header {
+        padding: 1rem;
+    }
+    
+    .logo-container h1 {
+        font-size: 1.3rem;
+    }
+    
+    nav ul {
+        gap: 1rem;
+    }
+    
+    /* Profile header */
+    .profile-header {
+        position: relative;
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+    
+    .profile-avatar {
+        margin: 0 auto 1rem;
+    }
+    
+    .user-badges {
+        justify-content: center;
+    }
+    
+    /* Stats section */
+    .profile-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stat-box:nth-child(2) {
+        border-right: none;
+    }
+    
+    .stat-box:nth-child(1),
+    .stat-box:nth-child(2) {
+        border-bottom: 1px solid var(--medium-gray);
+    }
+    
+    /* Products grid */
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    /* Tab content */
+    .info-row {
+        flex-direction: column;
+    }
+    
+    .info-label,
+    .info-value {
+        width: 100%;
+    }
+    
+    .info-label {
+        margin-bottom: 0.3rem;
+    }
+    
+    /* Footer adjustments */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-links {
+        margin: 1rem 0 2rem;
+    }
+    
+    .footer-links ul {
+        justify-content: center;
+    }
+}
+
+/* For mobile devices */
+@media screen and (max-width: 767px) {
+
+    .btn-home {
+        left: 8px;
+        top: 8px;
+        padding: 6px 10px;
+        font-size: 0.95rem;
+    }
+
+    /* Header */
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0.5rem;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    nav ul li a {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Tab navigation */
+    .profile-tabs {
+        padding: 1rem;
+    }
+    
+    .profile-tabs label {
+        padding: 0.6rem 0.8rem;
+        margin-right: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Stats section */
+    .profile-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-box {
+        border-right: none;
+        border-bottom: 1px solid var(--medium-gray);
+    }
+    
+    .stat-box:last-child {
+        border-bottom: none;
+    }
+    
+    /* Activity items */
+    .activity-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .activity-status {
+        align-self: flex-start;
+    }
+    
+    /* Review header */
+    .review-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    /* Products heading */
+    .products-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    /* Products grid */
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Settings items */
+    .setting-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+    
+    /* Footer links */
+    .footer-links ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* Adjustments for very small screens */
+@media screen and (max-width: 360px) {
+    .profile-avatar {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .profile-info h2 {
+        font-size: 1.5rem;
+    }
+    
+    .user-title {
+        font-size: 1rem;
+    }
+    
+    .tab-content {
+        padding: 1rem 0;
+    }
+    
+    .info-card {
+        padding: 1rem;
+    }
+    
+    .profile-tabs label {
+        padding: 0.5rem 0.6rem;
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,66 @@
+header {
+    position: relative;
+    z-index: 100;
+}
+
+header nav {
+    background-color: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    position: fixed;
+}
+
+#novita,
+#categoria {
+    scroll-margin-top: 100px; /* Altezza della navbar */
+}
+
+nav {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #33333300;
+    padding: 25px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo a {
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    font: 800;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+}
+
+.nav-links a {
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 2px 0;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}

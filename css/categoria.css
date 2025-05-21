@@ -1,0 +1,77 @@
+.hero-section {
+    display: flex;
+    min-height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1e23;
+}
+
+.card-container {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    list-style: none;
+    width: 220px; /* Larghezza della card */
+    aspect-ratio: 1 / 1; /* Garantisce che la card sia quadrata */
+    transition: .3s ease;
+    overflow: hidden; /* Nasconde gli elementi che escono dai bordi */
+    border-radius: 20px; /* Angoli arrotondati */
+}
+
+.card-background {
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(.9) saturate(1) contrast(1);
+    transform-origin: bottom;
+    transform: scale(1) translateZ(0);
+    transition: .3s ease;
+    z-index: 1; /* Posiziona l'immagine sotto il contenuto */
+}
+
+.card:hover .card-background {
+    transform: scale(1.15) translateZ(0);
+}
+
+.card-container:hover .card:not(:hover) {
+    transform: scale(.9);
+}
+
+.card-container:hover > .card:not(:hover) .card-background,
+.card-container:hover > .card:not(:hover) .card-category {
+    filter: brightness(.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+.contentCategory {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 2; /* Posiziona il contenuto sopra l'immagine */
+    text-align: center;
+    color: #fff;
+}
+
+.card-category {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.card-heading {
+    font-size: 18px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+}
